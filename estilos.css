@@ -143,16 +143,11 @@ textarea{
 } /*fin de formularios*/
 /* ************************************ */
 /* Pie de Pagina */
-.pie{
-    width: 100%;
-    background-color: rgb(243, 215, 215);
-}
 footer{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 350px;
     gap: 5px;
-    overflow: hidden;
 }
 footer iframe{
     margin-top: 0; /*elimino el margen superior del Iframe con respecto al Footer*/
