@@ -12,7 +12,8 @@ html{
 body{
     background-color: #f9ffff;
     min-height: 100vh;
-    background-image: linear-gradient(white,#d6e0e0,rgb(212, 202, 202));
+    background-image: linear-gradient(white,#f9ffff,#ededed,rgb(234, 232, 232)
+    ,rgb(212, 202, 202),#000);
 }
 .contenedor{
     width: 65%;
@@ -25,7 +26,7 @@ body{
 .logo{
     font-size: 23px;
     line-height: 80px;   
-    animation-duration: 3s; 
+    animation-duration: 2s; 
     animation-name: parpadear;
     animation-direction: alternate;
     animation-iteration-count: infinite;
@@ -55,6 +56,31 @@ a{
 li{
     list-style: none;
 }
+.social-media{
+    background-color: rgb(227, 222, 222);
+    width: 60px;
+    height: 80px;
+    font-size: 20px;
+    margin-left: 20px;
+    position: fixed;
+    top: 35%;
+    margin-left: 2px;
+}
+.social-media ul{
+    width: 100%;
+    height: auto;
+    display: block;
+    
+}
+.social-media ul li a{
+    width: 100%;
+    height: 80px;
+    background-image: url(imagenes/whatsapp.png);
+    background-repeat: no-repeat;
+
+
+
+}
 .home{ /*corresponde a Inicio*/
     height: 170vh;
     background-image: url(imagenes/20191228_165918.jpg);
@@ -66,7 +92,8 @@ li{
 .info{
     width: 30%;
     height: 180px;
-    background-color: tr;
+    background-color: transparent;
+    padding: 5px;
 }
 .info h1{
     color: white;
@@ -107,7 +134,7 @@ section{
     grid-template-rows: 400px 350px 420px;
     grid-gap: 5px;
 }
-.fotos:hover{
+.img-foto:hover{
     transform: scale(1.02);
     transition: all 0.9s;
 }
@@ -159,7 +186,7 @@ footer iframe{
     border-radius: 18px;
 }
 
-/* Boton de subir */
+/***Boton de subir ***/
 .subir{
     width: 50px;
     height: 50px;
@@ -168,7 +195,35 @@ footer iframe{
     right: 40px;
     text-align: center;
     font-size: 30px;
+    color: white;
+    background-color: #000;
+    line-height: 50px;
+    border-radius: 50%;
+    animation-duration: 2s; 
+    animation-name: subida;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
 }
+/***ZONA DE ANIMACIONES***/
+@keyframes parpadear { /*LOGO*/
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    } 
+}
+@keyframes subida { /*BOTON DE SUBIR*/
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    } 
+}
+/***FIN ZONA DE ANIMACIONES***/
+
+/**** ZONA DE MEDIA QUERIES ****/
 @media screen and (min-width:480px) and (max-width: 599px){
     .home{ /*corresponde a Inicio*/
         height: 60vh;
@@ -278,7 +333,6 @@ footer iframe{
     }
     
 }
-
 @media screen and (min-width:800px) and (max-width: 1000px){
     .home{ /*corresponde a Inicio*/
         height: 100vh;
@@ -290,7 +344,7 @@ footer iframe{
     }
     .galeri{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); /*repetir 2 columnas, una fraccion c/u */
         grid-template-rows: 300px 300px 300px 300px 450px;
     }
     .foto9{
@@ -358,14 +412,4 @@ footer iframe{
         text-align: justify;
     }
 }
-@keyframes parpadear {
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-    
-}
-
 
