@@ -13,7 +13,7 @@ body{
     background-color: #f9ffff;
     min-height: 100vh;
     background-image: linear-gradient(white,#f9ffff,#ededed,rgb(234, 232, 232)
-    ,rgb(212, 202, 202),#000);
+    ,rgb(212, 202, 202),rgba(78, 74, 74, 0.544));
 }
 .contenedor{
     width: 66%;
@@ -205,6 +205,17 @@ footer{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 350px;
     gap: 5px; */
+    text-align: center;
+}
+footer p{
+    font-size: 26px;
+    text-transform: capitalize;
+}
+footer i{
+    font-size: 50px;    
+    letter-spacing: 25px;
+    line-height: 150px;
+
 }
 .pie{
     height: 300px;
@@ -274,11 +285,7 @@ footer iframe{
         grid-template-columns: 1fr;
         grid-template-rows: repeat(9, 2fr);
     }
-    footer{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 250px 250px;
-    }
+   
     .secciones{
         display: grid;
         grid-template-columns: 1fr;
@@ -326,11 +333,7 @@ footer iframe{
         grid-template-columns:  1fr;
         grid-template-rows: repeat(9, 1fr)
     }
-    footer{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 250px 250px;
-    } 
+    
     .secciones{
         display: grid;
         grid-template-columns: 1fr;
