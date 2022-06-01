@@ -25,6 +25,7 @@ body{
 }
 .tobati{
     padding: 5px 5px 5px 0px;
+    border-radius: 50%;
 }
 .logo{
     font-size: 23px;
@@ -142,16 +143,23 @@ li{
     background-color: white;
 }
 /* Servicios */
-section{
-    width: 100%;
+.section{
     background-color: rgb(223, 243, 249);
+    border: 2px solid;   
+    height: 400px;
+    text-align: center;
+}
+.card{
+    margin: auto;
+    text-align: center;
 }
 /***NOTICIAS***/
 .secciones{
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 400px 400px 400px;
-    grid-gap: 5px;
+    grid-gap: 5px; */
+    width: 100%;
 }
 /***FIN NOTICIAS***/
 /* Galeria de imagenes */
@@ -285,12 +293,7 @@ footer iframe{
         grid-template-columns: 1fr;
         grid-template-rows: repeat(9, 2fr);
     }
-   
-    .secciones{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 150px 150px 150px 150px 150px 150px
-    }
+
     .menu{
         display: grid;
         grid-template-columns: 1fr;
@@ -334,11 +337,6 @@ footer iframe{
         grid-template-rows: repeat(9, 1fr)
     }
     
-    .secciones{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 300px 300px 300px 300px 300px 300px
-    }
     .menu{
         display: grid;
         grid-template-columns: 1fr
