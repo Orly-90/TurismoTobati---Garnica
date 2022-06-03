@@ -104,7 +104,7 @@ li{
 }
 .home{ /*corresponde a Index*/
     width: 1110px;
-    height: 155vh;
+    height: 190vh;
     background-image: url(imagenes/20191228_165918.jpg);
     background-position: center;
     background-size: cover;
@@ -112,8 +112,8 @@ li{
     margin-right: auto;
 }
 .carousel-indicators li{
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
 }
 .fotoCarrusel{
@@ -224,18 +224,30 @@ footer iframe{
     border-radius: 18px;
 }
 
-/***Boton de subir ***/
+.ini{
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 35px;
+    right: 40px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    background-color: #000;
+    line-height: 40px;
+    border-radius: 50%;  
+}
 .subir{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     position: fixed;
     bottom: 40px;
     right: 40px;
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     color: white;
     background-color: #000;
-    line-height: 50px;
+    line-height: 40px;
     border-radius: 50%;
     animation-duration: 2s; 
     animation-name: subida;
