@@ -102,7 +102,7 @@ li{
     background-image: url(imagenes/whatsapp.png);
     background-repeat: no-repeat;
 }
-.home{ /*corresponde a Inicio*/
+.home{ /*corresponde a Index*/
     width: 1110px;
     height: 155vh;
     background-image: url(imagenes/20191228_165918.jpg);
@@ -111,11 +111,16 @@ li{
     margin-left: auto;
     margin-right: auto;
 }
-
+.carousel-indicators li{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
 .fotoCarrusel{
     padding: 5px;
     background-color: white;
 }
+/*Fin de Index*/
 /* Servicios */
 .section{
     background-color: rgb(223, 243, 249);
@@ -266,6 +271,10 @@ footer iframe{
         margin-left: auto;
         margin-right: auto;
     }
+    .fotoCarrusel img{
+        width: 49.6%;
+        height: 250px;
+    }
     .galeri{
         display: grid;
         grid-template-columns: 1fr;
@@ -308,6 +317,10 @@ footer iframe{
         background-size: cover;
         margin-left: auto;
         margin-right: auto;
+    }
+    .fotoCarrusel img{
+        width: 49.5%;
+        height: 250px;
     }
     .galeri{
         display: grid;
@@ -357,6 +370,10 @@ footer iframe{
         margin-left: auto;
         margin-right: auto;
     }
+    .fotoCarrusel img{
+        width: 49.7%;
+        height: 250px;
+    }
     .galeri{
         display: grid;
         grid-template-columns: repeat(2, 1fr); /*repetir 2 columnas, una fraccion c/u */
@@ -400,6 +417,10 @@ footer iframe{
         background-size: cover;
         margin-left: auto;
         margin-right: auto;
+    }
+    .fotoCarrusel img{
+        width: 49.7%;
+        height: 250px;
     }
     .menu{
         display: grid;
