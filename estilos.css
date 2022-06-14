@@ -16,6 +16,18 @@ body {
   background-image: linear-gradient(white, #f9ffff, #ededed, rgb(234, 232, 232), rgb(212, 202, 202), rgba(78, 74, 74, 0.544));
 }
 
+label i {
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 35;
+  color: white;
+  background-color: #000;
+  border-radius: 18%;
+  display: none;
+}
+
 .contenedor {
   width: 66%;
   margin: auto;
@@ -59,12 +71,6 @@ body {
   text-decoration: none;
 }
 
-.clima {
-  position: relative;
-  line-height: 110px;
-  margin-left: 5px;
-}
-
 .climaInicio {
   position: relative;
   line-height: 110px;
@@ -95,14 +101,20 @@ li {
 .social-media {
   width: 60px;
   height: auto;
-  font-size: 30px;
+  font-size: 34px;
   position: fixed;
   top: 35%;
-  margin-left: 5px;
+  right: 11px;
   z-index: 999;
 }
 .social-media ul li a:hover {
   padding: 0 5px;
+}
+.social-media .fa-brands.fa-instagram:hover {
+  color: #f42e78;
+}
+.social-media .fa-brands.fa-whatsapp:hover {
+  color: #25d366;
 }
 
 .home {
@@ -202,11 +214,6 @@ footer p {
   font-size: 26px;
   text-transform: capitalize;
 }
-footer i {
-  font-size: 50px;
-  letter-spacing: 25px;
-  line-height: 150px;
-}
 footer iframe {
   margin-top: 0;
   border-radius: 18px;
@@ -227,11 +234,10 @@ footer iframe {
   border-radius: 18px;
 }
 
-.ini {
+.ini, .subir {
   width: 35px;
   height: 35px;
   position: fixed;
-  top: 35px;
   right: 40px;
   text-align: center;
   font-size: 20px;
@@ -241,18 +247,12 @@ footer iframe {
   border-radius: 50%;
 }
 
+.btn-inicio {
+  top: 35px;
+}
+
 .subir {
-  width: 35px;
-  height: 35px;
-  position: fixed;
   bottom: 40px;
-  right: 40px;
-  text-align: center;
-  font-size: 20px;
-  color: white;
-  background-color: #000;
-  line-height: 35px;
-  border-radius: 50%;
   -webkit-animation-duration: 4s;
           animation-duration: 4s;
   -webkit-animation-name: subida;

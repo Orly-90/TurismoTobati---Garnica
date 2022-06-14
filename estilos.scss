@@ -19,6 +19,17 @@ body{
     background-image: linear-gradient(white,#f9ffff,#ededed,rgb(234, 232, 232)
     ,rgb(212, 202, 202),rgba(78, 74, 74, 0.544));
 }
+label i{
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 35;
+    color: white;
+    background-color: #000;
+    border-radius: 18%;
+    display: none;
+}
 .contenedor{
     width: 66%;
     margin: auto;
@@ -54,15 +65,9 @@ body{
         background-color: rgb(52, 52, 235);
     }
 }
-
 .logo:hover{
     border: 1px solid rgba(24, 21, 21, 0.4);
     text-decoration: none;
-}
-.clima{
-    position: relative;
-    line-height: 110px;
-    margin-left: 5px;
 }
 .climaInicio{
     position: relative;
@@ -88,17 +93,23 @@ a{
 li{
     list-style: none;
 }
-.social-media{
+.social-media{ //BOTONES REDES SOCIALES//
     width: 60px;
     height: auto;
-    font-size: 30px;
+    font-size: 34px;
     position: fixed;
     top: 35%;
-    margin-left: 5px;
+    right: 11px;
     z-index: 999;
 
     ul li a:hover{
         padding: 0 5px;
+    }
+    .fa-brands.fa-instagram:hover{
+        color: #f42e78;
+    }
+    .fa-brands.fa-whatsapp:hover{
+        color: #25d366;
     }
 }
 .home{ //corresponde a Index
@@ -202,13 +213,6 @@ footer{
         font-size: 26px;
         text-transform: capitalize;
     }
-
-    i{
-        font-size: 50px;    
-        letter-spacing: 25px;
-        line-height: 150px;
-    }
-
     iframe{
         margin-top: 0; //*elimino el margen superior del Iframe con respecto al Footer*/
         border-radius: 18px;
@@ -223,16 +227,14 @@ footer{
 .fotoPie{
     border-radius: 18px;
 }
-
 #cont_04575148dc559c948cf6a66f3f7628f6{
     border-radius: 18px;
 }
-//***BOTONES LATERALES***/
+//***BOTONES LATERALES DERECHO***/
 .ini{
     width: 35px;
     height: 35px;
     position: fixed;
-    top: 35px;
     right: 40px;
     text-align: center;
     font-size: 20px;
@@ -241,18 +243,12 @@ footer{
     line-height: 35px;
     border-radius: 50%;  
 }
+.btn-inicio{
+    top: 35px;
+}
 .subir{
-    width: 35px;
-    height: 35px;
-    position: fixed;
+    @extend .ini;
     bottom: 40px;
-    right: 40px;
-    text-align: center;
-    font-size: 20px;
-    color: white;
-    background-color: #000;
-    line-height: 35px;
-    border-radius: 50%;
     animation-duration: 4s; 
     animation-name: subida;
     animation-direction: alternate;
@@ -309,7 +305,7 @@ footer{
     .enlaces a{
         width: 100px;
     }
-    .pie iframe{
+    .pie iframe{ //Achico los iframe en este punto de Quiebre
         height: 250px;
     }
 }
