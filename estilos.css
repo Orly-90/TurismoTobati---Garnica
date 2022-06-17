@@ -203,18 +203,18 @@ textarea {
 
 /* ************************************ */
 footer {
-  text-align: center;
   margin-top: 30px;
 }
 footer p {
-  font-size: 26px;
+  font-size: 24px;
   text-transform: capitalize;
+  text-align: center;
 }
 footer iframe {
   margin-top: 0;
-  border-radius: 18px;
+  border-radius: 10px;
   width: 100%;
-  height: 60%;
+  height: 250px;
 }
 
 .pie {
@@ -223,11 +223,7 @@ footer iframe {
 }
 
 .fotoPie {
-  border-radius: 18px;
-}
-
-#cont_04575148dc559c948cf6a66f3f7628f6 {
-  border-radius: 18px;
+  border-radius: 10px;
 }
 
 .ini, .subir {
@@ -315,7 +311,12 @@ footer iframe {
   }
 
   .pie iframe {
+    width: 350px;
     height: 250px;
+    margin-left: 0px;
+  }
+  .pie iframe p {
+    text-align: center;
   }
 }
 @media screen and (min-width: 600px) and (max-width: 799px) {
