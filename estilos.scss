@@ -33,15 +33,7 @@ body{
     height: $hei;
     background-color: $Bcolor;
 }
-label i{
-    @include tamanio(35px, 35px,#000);
-    text-align: center;
-    font-size: 20px;
-    line-height: 35;
-    color: map-get($map: $paletas, $key: 'blanco');
-    border-radius: 18%;
-    display: none;
-}
+
 .contenedor{
     width: 66%;
     margin: auto;
@@ -59,7 +51,22 @@ label i{
     .logo{
         font-size: 20px;
         line-height: 50px;  
+    }
+    .enlaces a {
+        list-style: none;
+        font-size: 20px; //tamanio de letra
+        margin: 0 10px ;
+        line-height: 110px;
+        border: 1px solid transparent;
+    
+        &:hover{
+            border: 1px solid rgba(24, 21, 21, 0.4);
+            text-decoration: none;
+        }
+    }
 
+    #btn-menu{
+        display: none;
     }
     
 }
@@ -68,18 +75,7 @@ label i{
     line-height: 110px;
     margin-left: 5px;
 }
-.enlaces a {
-    list-style: none;
-    font-size: 20px; //tamanio de letra
-    margin: 0 10px ;
-    line-height: 110px;
-    border: 1px solid transparent;
 
-    &:hover{
-        border: 1px solid rgba(24, 21, 21, 0.4);
-        text-decoration: none;
-    }
-}
 a{
     color: rgb(30, 26, 26); //color de texto de los nav 
     text-decoration: none;
@@ -268,11 +264,6 @@ footer{
 
 //**** ZONA DE MEDIA QUERIES ****/
 @media screen and (min-width:480px) and (max-width: 599px){
-    .menu .enlaces a{
-        width: 100px;
-        line-height: 60px;
-    }
-
     .home{ /*corresponde a Inicio*/
         height: 120vh;
         background-image: url(imagenes/20191228_165918.jpg);
@@ -280,6 +271,20 @@ footer{
         background-size: cover;
         margin-left: auto;
         margin-right: auto;
+    }
+    .menu{
+        display: grid;
+        grid-template-columns: 1fr;
+    
+        .enlaces{
+            display: flex;
+            flex-direction: column;
+
+            a{
+                width: 100px;
+                line-height: 60px;
+            }
+        }
     }
     .fotoCarrusel img{ /*Achico las imagenes del Carrusel en este Punto de Quiebre*/
         width: 49.6%;
@@ -290,16 +295,7 @@ footer{
         grid-template-columns: 1fr;
         grid-template-rows: repeat(9, 2fr);
     }
-
-    .menu{
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-    .enlaces{
-        display: flex;
-        flex-direction: column;
-    }
-
+    
     .pie iframe{ //Achico los iframe en este punto de Quiebre
         width: 350px;
         height: 250px;
@@ -309,7 +305,6 @@ footer{
             text-align: center;
         }
     }
-
 }
 
 @media screen and (min-width:600px) and (max-width: 799px){
@@ -332,14 +327,16 @@ footer{
     }
     .menu{
         display: grid;
-        grid-template-columns: 1fr
-    }
-    .enlaces{
-        width: 150%;
-    }
-    .enlaces a{
-        width: 90px;
-    }
+        grid-template-columns: 1fr;
+
+        .enlaces{
+            width: 150%;
+
+            a{
+                width: 90px;
+            }
+        }
+    }  
     .pie iframe{
         height: 280px;
     }
@@ -367,13 +364,15 @@ footer{
     }
     .menu{
         display: grid;
-        grid-template-columns: 1fr
-    }
-    .enlaces{
-        width: 150%;
-    }
-    .enlaces a{
-        width: 90px;
+        grid-template-columns: 1fr;
+
+        .enlaces{
+            width: 150%;
+
+            a{
+                width: 90px;
+            }
+        }
     }
 }
 @media screen and (min-width:1001px) and (max-width: 1464px){
@@ -392,11 +391,13 @@ footer{
     .menu{
         display: grid;
         grid-template-columns: 1fr;
-    }
-    .enlaces{
-        width: 150%;
-    }
-    .enlaces a{
-        width: 90px;
+
+        .enlaces{
+            width: 150%;
+
+            a{
+                width: 90px;
+            }
+        }
     }
 }

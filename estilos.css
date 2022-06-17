@@ -16,18 +16,6 @@ body {
   background-image: linear-gradient(white, #f9ffff, #ededed, rgb(234, 232, 232), rgb(212, 202, 202), rgba(78, 74, 74, 0.544));
 }
 
-label i {
-  width: 35px;
-  height: 35px;
-  background-color: #000;
-  text-align: center;
-  font-size: 20px;
-  line-height: 35;
-  color: white;
-  border-radius: 18%;
-  display: none;
-}
-
 .contenedor {
   width: 66%;
   margin: auto;
@@ -46,23 +34,25 @@ label i {
   font-size: 20px;
   line-height: 50px;
 }
-
-.clima {
-  position: relative;
-  line-height: 110px;
-  margin-left: 5px;
-}
-
-.enlaces a {
+.menu .enlaces a {
   list-style: none;
   font-size: 20px;
   margin: 0 10px;
   line-height: 110px;
   border: 1px solid transparent;
 }
-.enlaces a:hover {
+.menu .enlaces a:hover {
   border: 1px solid rgba(24, 21, 21, 0.4);
   text-decoration: none;
+}
+.menu #btn-menu {
+  display: none;
+}
+
+.clima {
+  position: relative;
+  line-height: 110px;
+  margin-left: 5px;
 }
 
 a {
@@ -273,11 +263,6 @@ footer iframe {
   }
 }
 @media screen and (min-width: 480px) and (max-width: 599px) {
-  .menu .enlaces a {
-    width: 100px;
-    line-height: 60px;
-  }
-
   .home {
     /*corresponde a Inicio*/
     height: 120vh;
@@ -286,6 +271,19 @@ footer iframe {
     background-size: cover;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .menu {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .menu .enlaces {
+    display: flex;
+    flex-direction: column;
+  }
+  .menu .enlaces a {
+    width: 100px;
+    line-height: 60px;
   }
 
   .fotoCarrusel img {
@@ -298,16 +296,6 @@ footer iframe {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(9, 2fr);
-  }
-
-  .menu {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
-  .enlaces {
-    display: flex;
-    flex-direction: column;
   }
 
   .pie iframe {
@@ -346,12 +334,10 @@ footer iframe {
     display: grid;
     grid-template-columns: 1fr;
   }
-
-  .enlaces {
+  .menu .enlaces {
     width: 150%;
   }
-
-  .enlaces a {
+  .menu .enlaces a {
     width: 90px;
   }
 
@@ -391,12 +377,10 @@ footer iframe {
     display: grid;
     grid-template-columns: 1fr;
   }
-
-  .enlaces {
+  .menu .enlaces {
     width: 150%;
   }
-
-  .enlaces a {
+  .menu .enlaces a {
     width: 90px;
   }
 }
@@ -421,12 +405,10 @@ footer iframe {
     display: grid;
     grid-template-columns: 1fr;
   }
-
-  .enlaces {
+  .menu .enlaces {
     width: 150%;
   }
-
-  .enlaces a {
+  .menu .enlaces a {
     width: 90px;
   }
 }/*# sourceMappingURL=estilos.css.map */
