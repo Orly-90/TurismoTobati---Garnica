@@ -38,37 +38,13 @@ label i {
   justify-content: space-between;
 }
 .menu .tobati {
+  background-color: rgba(0, 0, 0, 0.4);
   padding: 5px 5px 5px 0px;
   border-radius: 50%;
 }
 .menu .logo {
   font-size: 20px;
   line-height: 50px;
-  -webkit-animation-duration: 10s;
-          animation-duration: 10s;
-  -webkit-animation-name: parpadear;
-          animation-name: parpadear;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-.menu .espan1 {
-  color: #282828;
-  background-color: rgb(245, 61, 44);
-}
-.menu .espan2 {
-  color: #282828;
-  background-color: white;
-}
-.menu .espan3 {
-  color: #282828;
-  background-color: rgb(52, 52, 235);
-}
-
-.logo:hover {
-  border: 1px solid rgba(24, 21, 21, 0.4);
-  text-decoration: none;
 }
 
 .clima {
@@ -77,14 +53,14 @@ label i {
   margin-left: 5px;
 }
 
-.menu .enlaces a {
+.enlaces a {
   list-style: none;
   font-size: 20px;
   margin: 0 10px;
   line-height: 110px;
   border: 1px solid transparent;
 }
-.menu .enlaces a:hover {
+.enlaces a:hover {
   border: 1px solid rgba(24, 21, 21, 0.4);
   text-decoration: none;
 }
@@ -142,19 +118,39 @@ li {
 }
 
 .section {
-  background-color: rgb(223, 243, 249);
-  border: 2px solid;
   height: 400px;
   text-align: center;
 }
 
 .card {
-  margin: auto;
-  text-align: center;
+  height: 350px;
+  box-shadow: 3px 5px 5px rgba(3, 32, 51, 0.8);
 }
 
-.secciones {
-  width: 100%;
+.card-servicios {
+  background: var(--i);
+  background-size: cover;
+  font-size: 22px;
+}
+
+.card-body-servicios {
+  padding: 40px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: 0.9s;
+}
+.card-body-servicios:hover {
+  opacity: 1;
+}
+
+.card-noticias {
+  margin: auto;
+}
+
+.card-noticias:hover {
+  transition: 0.9s;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .galeri {
@@ -263,23 +259,6 @@ footer iframe {
           animation-iteration-count: infinite;
 }
 
-@-webkit-keyframes parpadear {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes parpadear {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 @-webkit-keyframes subida {
   0% {
     opacity: 0;
@@ -288,6 +267,7 @@ footer iframe {
     opacity: 1;
   }
 }
+
 @keyframes subida {
   0% {
     opacity: 0;
@@ -297,9 +277,14 @@ footer iframe {
   }
 }
 @media screen and (min-width: 480px) and (max-width: 599px) {
+  .menu .enlaces a {
+    width: 100px;
+    line-height: 60px;
+  }
+
   .home {
     /*corresponde a Inicio*/
-    height: 60vh;
+    height: 120vh;
     background-image: url(imagenes/20191228_165918.jpg);
     background-position: center;
     background-size: cover;
@@ -329,10 +314,6 @@ footer iframe {
     flex-direction: column;
   }
 
-  .enlaces a {
-    width: 100px;
-  }
-
   .pie iframe {
     height: 250px;
   }
@@ -340,7 +321,7 @@ footer iframe {
 @media screen and (min-width: 600px) and (max-width: 799px) {
   .home {
     /*corresponde a Inicio*/
-    height: 80vh;
+    height: 120vh;
     background-image: url(imagenes/20191228_165918.jpg);
     background-position: center;
     background-size: cover;
@@ -380,7 +361,7 @@ footer iframe {
 @media screen and (min-width: 800px) and (max-width: 1000px) {
   .home {
     /*corresponde a Inicio*/
-    height: 100vh;
+    height: 160vh;
     background-image: url(imagenes/20191228_165918.jpg);
     background-position: center;
     background-size: cover;
@@ -421,7 +402,7 @@ footer iframe {
 @media screen and (min-width: 1001px) and (max-width: 1464px) {
   .home {
     /*corresponde a Inicio*/
-    height: 130vh;
+    height: 200vh;
     background-image: url(imagenes/20191228_165918.jpg);
     background-position: center;
     background-size: cover;
