@@ -93,6 +93,8 @@ li {
 }
 
 .conte-carru {
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 30px;
 }
 
@@ -104,12 +106,40 @@ li {
 
 .fotoCarrusel {
   border-radius: 15px;
-  -o-object-fit: contain;
-     object-fit: contain;
 }
 .fotoCarrusel img {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.nosotros {
+  margin-top: 30px;
+  height: 500px;
+}
+
+.row {
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+}
+
+.izquierda {
+  height: 500px;
+  background-image: url(imagenes/quienSoy.jpg);
+  background-size: cover;
+}
+
+.derecha h3 {
+  text-align: center;
+  font-size: 40px;
+}
+.derecha p {
+  text-align: justify;
+  font-size: 30px;
+}
+.derecha:hover {
+  transition: 0.9s;
+  background-color: rgba(188, 188, 188, 0.765);
 }
 
 .section {
@@ -149,11 +179,9 @@ li {
 }
 
 .galeri {
-  margin-left: auto;
-  margin-right: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 400px 350px 390px 390px;
+  grid-template-rows: 400px 350px 390px 410px;
   grid-template-areas: "a  a  b  c" "d  e  e  f" "g  h  i  i" "j  j  k  k";
   grid-gap: 5px;
 }
@@ -202,6 +230,10 @@ li {
 }
 
 fieldset {
+  background-image: url(imagenes/sobre.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: auto;
   border: transparent;
 }
 
@@ -216,10 +248,22 @@ form {
   padding: 10px 20px;
 }
 
+label {
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
 button {
   width: 100%;
   margin-bottom: 20px;
   border: none;
+  border-radius: 5px;
+  box-shadow: 3px 5px 5px rgba(3, 32, 51, 0.8);
+  transition: transform 200ms, box-shadow 200ms;
+}
+button:active {
+  transform: translateY(4px) translateX(4px);
+  box-shadow: 3px 5px 5px rgba(3, 32, 51, 0.8);
 }
 
 input, textarea {
@@ -248,7 +292,10 @@ footer iframe {
   margin-top: 0;
   border-radius: 10px;
   width: 100%;
-  height: 250px;
+  height: 245px;
+}
+footer img {
+  margin-bottom: 8px;
 }
 
 .pie {
@@ -265,7 +312,7 @@ footer iframe {
   height: 35px;
   background-color: #000;
   position: fixed;
-  right: 30px;
+  right: 28px;
   text-align: center;
   font-size: 20px;
   color: white;
@@ -307,8 +354,7 @@ footer iframe {
   }
 }
 @media screen and (min-width: 480px) and (max-width: 599px) {
-  .home {
-    /*corresponde a Inicio*/
+  .home { /*corresponde a Inicio*/
     height: 120vh;
     background-image: url(imagenes/20191228_165918.jpg);
     background-position: center;
@@ -316,7 +362,19 @@ footer iframe {
     margin-left: auto;
     margin-right: auto;
   }
-
+  .izquierda {
+    height: 300px;
+    background-image: url(imagenes/quienSoy.jpg);
+    background-size: cover;
+  }
+  .derecha h3 {
+    text-align: center;
+    font-size: 30px;
+  }
+  .derecha p {
+    text-align: justify;
+    font-size: 20px;
+  }
   .menu {
     display: grid;
     grid-template-columns: 1fr;
@@ -345,17 +403,13 @@ footer iframe {
   .menu .enlaces a:hover {
     border-bottom: 4px solid #c7c7c7;
   }
-
-  .fotoCarrusel img {
-    /*Achico las imagenes del Carrusel en este Punto de Quiebre*/
+  .fotoCarrusel img { /*Achico las imagenes del Carrusel en este Punto de Quiebre*/
     width: 49.6%;
     height: 250px;
   }
-
   .galeri {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    /*repetir 4 columnas, una fraccion c/u */
+    grid-template-columns: repeat(4, 1fr); /*repetir 4 columnas, una fraccion c/u */
     grid-template-rows: repeat(11, 350px);
     grid-gap: 5px;
   }
@@ -402,7 +456,6 @@ footer iframe {
     grid-column: 1/5;
     grid-row: 11/12;
   }
-
   .pie iframe {
     width: 530px;
     height: 250px;
@@ -413,8 +466,7 @@ footer iframe {
   }
 }
 @media screen and (min-width: 600px) and (max-width: 799px) {
-  .home {
-    /*corresponde a Inicio*/
+  .home { /*corresponde a Inicio*/
     height: 120vh;
     background-image: url(imagenes/20191228_165918.jpg);
     background-position: center;
@@ -422,18 +474,113 @@ footer iframe {
     margin-left: auto;
     margin-right: auto;
   }
-
-  .fotoCarrusel img {
-    /*Achico las imagenes del Carrusel en este Punto de Quiebre*/
+  .izquierda {
+    height: 300px;
+    background-image: url(imagenes/quienSoy.jpg);
+    background-size: cover;
+  }
+  .derecha h3 {
+    text-align: center;
+    font-size: 30px;
+  }
+  .derecha p {
+    text-align: justify;
+    font-size: 20px;
+  }
+  .fotoCarrusel img { /*Achico las imagenes del Carrusel en este Punto de Quiebre*/
     width: 49.5%;
     height: 250px;
   }
-
   .galeri {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    /*repetir 4 columnas, una fraccion c/u */
-    grid-template-rows: 350px 350px 350px 350px 350px 350px;
+    grid-template-columns: repeat(4, 1fr); /*repetir 4 columnas, una fraccion c/u */
+    grid-template-rows: repeat(11, 350px);
+    grid-gap: 5px;
+  }
+  .galeri .foto1 {
+    grid-column: 1/5;
+  }
+  .galeri .foto2 {
+    grid-column: 1/5;
+    grid-row: 2/3;
+  }
+  .galeri .foto3 {
+    grid-column: 1/5;
+    grid-row: 3/4;
+  }
+  .galeri .foto4 {
+    grid-column: 1/5;
+    grid-row: 4/5;
+  }
+  .galeri .foto5 {
+    grid-column: 1/5;
+    grid-row: 5/6;
+  }
+  .galeri .foto6 {
+    grid-column: 1/5;
+    grid-row: 6/7;
+  }
+  .galeri .foto7 {
+    grid-column: 1/5;
+    grid-row: 7/8;
+  }
+  .galeri .foto8 {
+    grid-column: 1/5;
+    grid-row: 8/9;
+  }
+  .galeri .foto9 {
+    grid-column: 1/5;
+    grid-row: 9/10;
+  }
+  .galeri .foto10 {
+    grid-column: 1/5;
+    grid-row: 10/11;
+  }
+  .galeri .foto11 {
+    grid-column: 1/5;
+    grid-row: 11/12;
+  }
+  .menu {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .menu .enlaces {
+    width: 150%;
+  }
+  .menu .enlaces a {
+    width: 90px;
+  }
+}
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+  .home { /*corresponde a Inicio*/
+    height: 160vh;
+    background-image: url(imagenes/20191228_165918.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .izquierda {
+    height: 350px;
+    background-image: url(imagenes/quienSoy.jpg);
+    background-size: cover;
+  }
+  .derecha h3 {
+    text-align: center;
+    font-size: 30px;
+  }
+  .derecha p {
+    text-align: justify;
+    font-size: 20px;
+  }
+  .fotoCarrusel img { /*Achico las imagenes del Carrusel en este Punto de Quiebre*/
+    width: 49.7%;
+    height: 250px;
+  }
+  .galeri {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /*repetir 4 columnas, una fraccion c/u */
+    grid-template-rows: repeat(6, 350px);
     grid-gap: 5px;
   }
   .galeri .foto1 {
@@ -478,79 +625,6 @@ footer iframe {
     grid-column: 1/5;
     grid-row: 6/7;
   }
-
-  .menu {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  .menu .enlaces {
-    width: 150%;
-  }
-  .menu .enlaces a {
-    width: 90px;
-  }
-
-  .pie iframe {
-    height: 280px;
-  }
-}
-@media screen and (min-width: 800px) and (max-width: 1000px) {
-  .home {
-    /*corresponde a Inicio*/
-    height: 160vh;
-    background-image: url(imagenes/20191228_165918.jpg);
-    background-position: center;
-    background-size: cover;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .fotoCarrusel img {
-    /*Achico las imagenes del Carrusel en este Punto de Quiebre*/
-    width: 49.7%;
-    height: 250px;
-  }
-
-  .galeri {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /*repetir 3 columnas, una fraccion c/u */
-    grid-gap: 5px;
-  }
-  .galeri .foto1 {
-    grid-column: a;
-  }
-  .galeri .foto2 {
-    grid-area: b;
-  }
-  .galeri .foto3 {
-    grid-area: c;
-  }
-  .galeri .foto4 {
-    grid-area: d;
-  }
-  .galeri .foto5 {
-    grid-area: e;
-  }
-  .galeri .foto6 {
-    grid-area: f;
-  }
-  .galeri .foto7 {
-    grid-column: 1/3;
-  }
-  .galeri .foto8 {
-    grid-column: 3/4;
-  }
-  .galeri .foto9 {
-    grid-column: 4/5;
-  }
-  .galeri .foto10 {
-    grid-area: j;
-  }
-  .galeri .foto11 {
-    grid-area: k;
-  }
-
   .menu {
     display: grid;
     grid-template-columns: 1fr;
@@ -563,8 +637,7 @@ footer iframe {
   }
 }
 @media screen and (min-width: 1001px) and (max-width: 1464px) {
-  .home {
-    /*corresponde a Inicio*/
+  .home { /*corresponde a Inicio*/
     height: 200vh;
     background-image: url(imagenes/20191228_165918.jpg);
     background-position: center;
@@ -572,13 +645,23 @@ footer iframe {
     margin-left: auto;
     margin-right: auto;
   }
-
-  .fotoCarrusel img {
-    /*Achico las imagenes del Carrusel en este Punto de Quiebre*/
+  .izquierda {
+    height: 350px;
+    background-image: url(imagenes/quienSoy.jpg);
+    background-size: cover;
+  }
+  .derecha h3 {
+    text-align: center;
+    font-size: 35px;
+  }
+  .derecha p {
+    text-align: justify;
+    font-size: 23px;
+  }
+  .fotoCarrusel img { /*Achico las imagenes del Carrusel en este Punto de Quiebre*/
     width: 49.7%;
     height: 250px;
   }
-
   .menu {
     display: grid;
     grid-template-columns: 1fr;
